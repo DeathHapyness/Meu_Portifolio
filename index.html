@@ -417,8 +417,7 @@
             'linear-gradient(135deg, rgba(255,255,255,0.95) 0%, rgba(230,230,235,0.93) 100%)'
         }
       })
-      //MUDAR CAMNHOS DE FOTOS
-      // galleryData removido conforme solicitado
+      //MUDAR CAMNHOS DE FOTOS 
 
       function loadGallery() {
         const galleryGrid = document.querySelector('.gallery-grid')
@@ -580,9 +579,8 @@
         })
       }
 
-      // Animação de Drop para Destaques - REMOVIDA
       function setupDropAnimation() {
-        // Função vazia - animações removidas
+        
       }
 
       // Contact form handling
@@ -595,11 +593,11 @@
             const button = this.querySelector('button')
             const originalText = button.textContent
 
-            // Show loading state
+
             button.innerHTML = '<span class="loading"></span> Enviando...'
             button.disabled = true
 
-            // Simulate form submission
+
             setTimeout(() => {
               // Success animation
               button.innerHTML = '<i class="fas fa-check"></i> Enviado!'
@@ -621,7 +619,7 @@
         }
       }
 
-      // Back to top functionality
+
       function setupBackToTop() {
         const backToTopButton = document.getElementById('backToTop')
 
@@ -646,7 +644,7 @@
         const themeToggle = document.getElementById('themeToggle')
         const body = document.body
 
-        // Check for saved theme preference or default to blue theme
+
         const savedTheme = localStorage.getItem('theme') || 'blue'
         if (savedTheme === 'orange') {
           body.classList.add('orange-theme')
@@ -672,7 +670,8 @@
         const text = typewriterElement.textContent.trim()
         const textLength = text.length
 
-        // Adjust animation based on screen size and text length
+
+        
         function adjustTypewriterAnimation() {
           const screenWidth = window.innerWidth
           let steps, duration, animationName
@@ -694,20 +693,20 @@
             animationName = 'typing'
           }
 
-          // Remove existing animation
+
           typewriterElement.style.animation = 'none'
 
-          // Force reflow
+
           typewriterElement.offsetHeight
 
-          // Apply new animation
+
           typewriterElement.style.animation = `${animationName} ${duration}s steps(${steps}, end), blink-caret 0.75s step-end infinite`
         }
 
         // Initial adjustment
         setTimeout(adjustTypewriterAnimation, 100)
 
-        // Readjust on window resize with debounce
+
         let resizeTimer
         window.addEventListener('resize', () => {
           clearTimeout(resizeTimer)
@@ -717,13 +716,13 @@
         })
       }
 
-      // Initialize everything when DOM is loaded
+
       document.addEventListener('DOMContentLoaded', function () {
         // Load all sections
         loadTricks()
         loadEquipment()
 
-        // Initialize other functions (animations removed)
+
         initCounterAnimations()
         setupContactForm()
         setupBackToTop()
