@@ -3,17 +3,11 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta
-      name="description"
-      content="Letícia Lima - Atleta de Patinação Street | Patins Transformando Vidas"
-    />
+    <meta name="description" />
     <link rel="stylesheet" href="style1.css" />
     <link rel="stylesheet" href="script1.js" />
-    <meta
-      name="keywords"
-      content="leticia lima, patins, patinação street, atleta, salto sp, freestyle, nascimentoleticia516@gmail.com"
-    />
-    <title>Henrique.Dev</title>
+
+    <title>Rique.Dev</title>
 
     <!-- Font Awesome Icons -->
     <link
@@ -44,7 +38,7 @@
           overflow: hidden;
         "
       >
-        <img
+        <!--<img
           src="assets/icon/minha_logo.png"
           alt="Logo Henrique"
           style="
@@ -55,8 +49,8 @@
           "
         />
       </div>
-    </div>
-    <!-- Foto de perfil fixa no canto superior direito -->
+    </div>-->
+        <!-- Foto de perfil fixa no canto superior direito 
     <div style="position: fixed; top: 18px; right: 32px; z-index: 9999">
       <div
         style="
@@ -69,8 +63,8 @@
           align-items: center;
           justify-content: center;
           overflow: hidden;
-        "
-      >
+        "-->
+        >
         <img
           src="assets/image/foto_perfil.jpg"
           alt="Foto de Henrique"
@@ -266,27 +260,20 @@
         </div>
       </section>
 
-      <!-- Tricks Section -->
       <section id="tricks" class="tricks">
         <div class="container">
           <h2>Tecnologias</h2>
-          <div class="tricks-grid">
-            <!-- Cards de manobras serão adicionadas aqui -->
-          </div>
+          <div class="tricks-grid"></div>
         </div>
       </section>
 
-      <!-- Equipment Section -->
       <section id="equipment" class="equipment">
         <div class="container">
           <h2>Meus Projetos</h2>
-          <div class="equipment-grid">
-            <!-- Cards de equipamentos serão adicionadas aqui -->
-          </div>
+          <div class="equipment-grid"></div>
         </div>
       </section>
 
-      <!-- Contact Section -->
       <section id="contact" class="contact">
         <div class="container">
           <h2>Entre em Contato</h2>
@@ -296,21 +283,6 @@
                 <i class="fas fa-envelope"></i>
                 <span>hbarroscavrianii@gmail.com</span>
               </div>
-              <!-- 
-              <div class="contact-item">
-                <i class="fas fa-phone"></i>
-                <span>(11) 9 4149-9045</span>
-              </div>
-              <div class="contact-item">
-                <i class="fab fa-instagram"></i>
-                <a
-                  href="https://www.instagram.com/leticia_frestyle?igsh=eWIwMWh6b3Qzbnk="
-                  target="_blank"
-                  style="color: inherit; text-decoration: none"
-                  >@leticia_freestyle</a
-                >
-              </div>
-               -->
             </div>
             <form class="contact-form" id="contactForm">
               <input type="text" name="name" placeholder="Seu Nome" required />
@@ -367,7 +339,6 @@
       </div>
     </footer>
 
-    <!-- Theme Toggle Button -->
     <div class="theme-toggle">
       <label class="theme-switch">
         <input type="checkbox" id="themeToggle" />
@@ -417,7 +388,6 @@
             'linear-gradient(135deg, rgba(255,255,255,0.95) 0%, rgba(230,230,235,0.93) 100%)'
         }
       })
-      //MUDAR CAMNHOS DE FOTOS 
 
       function loadGallery() {
         const galleryGrid = document.querySelector('.gallery-grid')
@@ -579,8 +549,9 @@
         })
       }
 
+      // Animação de Drop para Destaques - REMOVIDA
       function setupDropAnimation() {
-        
+        // Função vazia - animações removidas
       }
 
       // Contact form handling
@@ -593,11 +564,11 @@
             const button = this.querySelector('button')
             const originalText = button.textContent
 
-
+            // Show loading state
             button.innerHTML = '<span class="loading"></span> Enviando...'
             button.disabled = true
 
-
+            // Simulate form submission
             setTimeout(() => {
               // Success animation
               button.innerHTML = '<i class="fas fa-check"></i> Enviado!'
@@ -619,7 +590,6 @@
         }
       }
 
-
       function setupBackToTop() {
         const backToTopButton = document.getElementById('backToTop')
 
@@ -639,11 +609,9 @@
         })
       }
 
-      // Theme toggle functionality
       function setupThemeToggle() {
         const themeToggle = document.getElementById('themeToggle')
         const body = document.body
-
 
         const savedTheme = localStorage.getItem('theme') || 'blue'
         if (savedTheme === 'orange') {
@@ -670,8 +638,6 @@
         const text = typewriterElement.textContent.trim()
         const textLength = text.length
 
-
-        
         function adjustTypewriterAnimation() {
           const screenWidth = window.innerWidth
           let steps, duration, animationName
@@ -693,19 +659,14 @@
             animationName = 'typing'
           }
 
-
           typewriterElement.style.animation = 'none'
 
-
           typewriterElement.offsetHeight
-
 
           typewriterElement.style.animation = `${animationName} ${duration}s steps(${steps}, end), blink-caret 0.75s step-end infinite`
         }
 
-        // Initial adjustment
         setTimeout(adjustTypewriterAnimation, 100)
-
 
         let resizeTimer
         window.addEventListener('resize', () => {
@@ -716,12 +677,9 @@
         })
       }
 
-
       document.addEventListener('DOMContentLoaded', function () {
-        // Load all sections
         loadTricks()
         loadEquipment()
-
 
         initCounterAnimations()
         setupContactForm()
@@ -729,7 +687,6 @@
         setupThemeToggle()
         setupResponsiveTypewriter()
 
-        // Navigation highlighting
         window.addEventListener('scroll', () => {
           const sections = document.querySelectorAll('section[id]')
           const navLinks = document.querySelectorAll('.nav-link')
